@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc" />
+
+    <!-- 评论布局 -->
+
+    <RelativeLayout
+        android:id="@+id/tri_message_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/tribal_message_img_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/yun_circle" />
+
+        <LinearLayout
+            android:id="@+id/tribal_message_experss_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tribal_message_img_btn"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/live_expre"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/footface01_circle" />
+
+            <Button
+                android:id="@+id/tribal_message_bnt_less"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/jianpan"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/message_lin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/live_sendBtn"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/send01_circle"
+                android:gravity="center"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/live_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/message_lin1"
+            android:layout_toRightOf="@id/tribal_message_experss_layout"
+            android:background="@mipmap/single_chat_bottom_et"
+            android:padding="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_arrow_down"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/message_lin1"
+            android:layout_toRightOf="@id/tribal_message_experss_layout"
+            android:background="#666666"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/single_chat_down"
+                android:gravity="center"></TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:id="@+id/live_express_view"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:background="#f6f5f5"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/live_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dip"
+            android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                style="@style/vp_bottom_rg"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                style="@style/vp_bottom_rg"
+                android:layout_marginLeft="5dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                style="@style/vp_bottom_rg"
+                android:layout_marginLeft="5dp" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                style="@style/vp_bottom_rg"
+                android:layout_marginLeft="5dp" />
+
+            <RadioButton
+                android:id="@+id/radio4"
+                style="@style/vp_bottom_rg"
+                android:layout_marginLeft="5dp" />
+
+            <RadioButton
+                android:id="@+id/radio5"
+                style="@style/vp_bottom_rg"
+                android:layout_marginLeft="5dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+</LinearLayout>
